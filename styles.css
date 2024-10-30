@@ -1,0 +1,197 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e5ddd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #075e54;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2em;
+}
+
+.chat-output {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-bubble {
+  padding: 10px 15px;
+  max-width: 75%;
+  border-radius: 8px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  position: relative;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+/* User message bubble */
+.chat-bubble.user {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* AI response bubble */
+.chat-bubble.ai {
+  background-color: #ffffff;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  border: 1px solid #ddd;
+}
+
+/* Input area styling */
+.input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+#game-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1em;
+  margin-right: 10px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #128c7e;
+}
+
+/* Form styling */
+.request-form,
+.updates-area {
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.request-form label,
+.updates-area h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.request-form input,
+.request-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  resize: vertical;
+}
+
+/* Updates area styling */
+.updates-output {
+  padding: 10px;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* Scrollbar styling */
+.chat-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-output::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 4px;
+}
+
+.faq-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+  color: #075e54;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.faq-item {
+  margin-top: 10px;
+}
+
+.faq-question {
+  background-color: #25d366;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #128c7e;
+}
+
+.faq-answer {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #25d366;
+  display: none; /* Awalnya disembunyikan */
+  margin-top: 5px;
+  border-radius: 5px;
+}

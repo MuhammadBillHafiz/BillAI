@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BILL AI (AI Pembagi Game)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>BILL AI <br>(AI Pembagi Game)</h1>
+      </header>
+
+      <div id="chat-output" class="chat-output"></div>
+
+      <div class="input-area">
+        <input
+          type="text"
+          id="game-input"
+          placeholder="Tanyakan nama game untuk didownload..."
+          onkeypress="if(event.key === 'Enter') searchGame()"
+        />
+        <button onclick="searchGame()">Kirim</button>
+      </div>
+
+      <form
+        action="https://formspree.io/f/xzzbepdv"
+        method="POST"
+        class="request-form"
+      >
+        <label
+          >Email Kamu:
+          <input type="email" name="email" required />
+        </label>
+        <label
+          >Sebutkan Game Request-an Kamu Untuk Ada Di Website Ini dan Pastinya
+          Untuk Kami Carikan Link Downloadnya :
+          <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="updates-area">
+        <h2>Lihat Update Terbaru</h2>
+        <button onclick="showUpdates()">Lihat Update</button>
+        <div id="updates-output" class="updates-output"></div>
+      </div>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Bagaimana cara menggunakan website ini?</h3>
+          </div>
+          <div class="faq-answer" style="display: none">
+            <p>
+              Anda bisa mengetik nama game yang ingin Anda cari di kolom
+              "Tanyakan Nama Game Untuk Didownload". Jika game tersedia, Anda
+              akan mendapatkan link download dan informasi lain yang dibutuhkan.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>
+              Apa yang harus dilakukan jika game yang dicari tidak ditemukan?
+            </h3>
+          </div>
+          <div class="faq-answer" style="display: none">
+            <p>
+              Jika game tidak ditemukan, Anda bisa mengirim permintaan melalui
+              form "Request Game" alias form di atas update terbaru, dan game
+              tersebut akan ditambahkan ke daftar permintaan. Atau Lihat FAQ Bagian Terakhir
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Apa Fungsi Website Ini?</h3>
+          </div>
+          <div class="faq-answer" style="display: none">
+            <p>
+              1. Agar Kalian Tidak Capek-capek Ke Google/Youtube/Media Lain Saat
+              Mencari Game Lagi Khususnya Game Yang Tidak Ada Di Play
+              Store/Steam
+              <br />2. Sebagai Tempat Game-Game Yang Tidak Ada di Platform Lain
+              Atau Yang Di Sembunyikan Developernya Biasanya Modifikasi/Mod Game
+              Yang Sudah Ada Atau Game Yang Sudah Lama Sekali Atau Bahkan Yang
+              Sudah Ditutup Developernya.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>
+              Bagaimana Cara Melewati Link Nya Dan Mendapatkan File Download Nya?
+            </h3>
+          </div>
+          <div class="faq-answer" style="display: none">
+            <p>
+              Anda Hanya Perlu Untuk Mengklik Link "Cara menginstallnya" Setiap Kamu Menanyakan Judul Game Yang Ingin Kamu Mainkan Ke AI Ini.
+            </p>
+          </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          <h3>
+            Berapa Game Yang Sudah Ada Di Website Ini? Sebutkan Apa Saja!
+          </h3>
+        </div>
+        <div class="faq-answer" style="display: none">
+          <p>
+            Game Yang Sudah Ada Di Website Ini Ada 100 Game Yaitu <br />1.
+            Status : Lengkap <br />(Mulai Dari Link Yang Downloadnya, Link
+            Cara Menginstallnya Maupun Link Cara Memainkan Gamenya) <br />-
+            Plant VS Zombies Fusion PC (+-700 MB)<br />- FIFA 23 (+-44 GB)
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">
+          <h3>
+            Jika Saya Menemukan Link Yang Salah Atau Rusak Apa Yang Harus Dilakukan?
+          </h3>
+        </div>
+        <div class="faq-answer" style="display: none">
+          <p>
+            Jika Link Menuju Ke ADSafeLink atau Gocidiwey Itu Wajar 
+            Dan Silahkan Menuju Ke FAQ Yang Sebelum Ini dan 
+            Jika Anda Benar-Benar Menemukan Link Yang Rusak Atau Salah 
+            Silahkan Langsung Ke Form Request Game Dan Menulis Link Game 
+            Apa Yang Salah Dan Terima Kasih Anda Sudah Berkontribusi Untuk 
+            Kemajuan Website Ini!
+          </p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
