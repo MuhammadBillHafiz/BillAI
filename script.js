@@ -1,15 +1,6 @@
 // Simpan data game di dalam array
 const gamesDatabase = [
   {
-    name: "Info",
-    downloadLink:
-      "Info 1 : Saat menggunakan ai ini, jangan bertanya selain dari JUDUL GAME nya saja jadi pastikan anda hanya menanyakan seperti ini contoh : FIFA 23",
-    installLink:
-      "Info 2 : Pastikan Terlebih Dahulu Secara Spesifik Game Yang Anda Ingin Mainkan Contoh : Apabila Game Tersebut Hanya Bisa Dimainkan di PC Tambahkan Di Belakang JUDUL GAME nya terdapat kata PC Agar AI Tidak Salah Paham! Contoh : FIFA 23 PC",
-    gameplayLink:
-      "Info 3 : Jika menurut anda game yang mau anda download ini akan berat atau lebih dari 10gb+, pastikan anda melihat link yang ada sebelum CARA MENGINSTALLNYA saat anda sudah input nama gamenya di chat box di bawah! Kenapa Tuh Bang AI? Ya supaya hp kalian tidak meledak wkwk",
-  },
-  {
     name: "Baldur's Gate 3",
     downloadLink: "Pending",
     installLink: "Pending",
@@ -744,12 +735,10 @@ const gameRequests = [];
 // Array untuk menyimpan update terbaru
 const updates = [
   "Update 0.1 (30/10/2024 Jam 14:30 WIB):",
-  "Menambahkan 5 Link Download Game Yang Baru :",
+  "Menambahkan 3 Link Download Game Yang Baru :",
   "1. FIFA 23 PC",
   "2. Plant VS Zombies Fusion PC",
   "3. Plant VS Zombies Fusion Android",
-  "4. Among Us PC",
-  "5. Streamer Life Simulator",
   "Menambahkan opsi Request Game.",
   "Meningkatkan tampilan UI.",
   "Menambahkan fitur Lihat Update Terbaru.",
